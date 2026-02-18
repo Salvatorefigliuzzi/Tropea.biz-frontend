@@ -1,0 +1,41 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Color system
+
+$primary:       #4361ee;
+$secondary:     #3f37c9;
+$success:       #198754;
+$info:          #4895ef; // Was --accent-color
+$warning:       #ffc107;
+$danger:        #dc3545;
+$light:         #f8f9fa; // Was --bg-color
+$dark:          #2b2d42; // Was --text-color
+
+// Body
+
+$body-bg:                   $light;
+$body-color:                $dark;
+
+// Typography
+// Note: You need to import the font in your main.scss or HTML
+$font-family-sans-serif:      'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+// Border radius
+
+$border-radius:               12px; // Was --radius-md
+$border-radius-lg:            16px; // Was --radius-lg
+$border-radius-sm:            8px;
+
+// Card
+$card-bg:                     #ffffff;
+$card-border-width:           0; // The original design had border: none for auth-card
+$card-box-shadow:             0 10px 15px rgba(0,0,0,0.1); // --shadow-lg
+
+// Inputs
+$input-bg:                    #f8f9fa;
+$input-border-color:          #e9ecef;
+$input-focus-border-color:    $primary;
+$input-focus-box-shadow:      0 0 0 4px rgba($primary, 0.15);

@@ -1,0 +1,82 @@
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+// Import Bootstrap's variables and functions to allow overrides
+@import "bootstrap/scss/functions";
+@import "./variables"; // Your custom variables
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+
+// Import Bootstrap parts
+@import "bootstrap/scss/bootstrap";
+
+// Custom Styles that are not covered by Bootstrap variables
+
+/* Auth Pages Styling */
+.auth-wrapper {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.auth-card {
+  // background, border-radius, box-shadow handled by Bootstrap card variables if used correctly,
+  // but let's keep specific class styling just in case they are not using .card
+  background: $card-bg;
+  border-radius: $border-radius-lg;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1); // --shadow-lg
+  border: none;
+  padding: 2rem;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.auth-title {
+  color: $primary;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+// Form Control overrides (extra padding)
+.form-control {
+  padding: 0.75rem 1rem;
+}
+
+// Button overrides (extra padding, hover effect)
+.btn-primary {
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+  &:hover {
+    // background-color handled by bootstrap
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba($primary, 0.3);
+  }
+
+  &:disabled {
+    background-color: #a0a0a0;
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+/* Navbar Styling */
+.navbar-custom {
+  background-color: $card-bg !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.07); // --shadow-md
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: $primary !important;
+}
